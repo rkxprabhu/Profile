@@ -7,6 +7,7 @@
     align-items: center;
     cursor: pointer;
     height: 55px;
+    width: 100%;
     border-bottom: 3px solid #736b6b3d;
 }
 .nav_background{
@@ -76,7 +77,7 @@ ul li:hover ul.dropdown{
 }
 /*-----------------------------MAIN----------------------------*/
 .main{
-    color:#fbfbfb52
+    color:#fbfbfb52;
 }
 .background{
     background-color: #14131a;
@@ -85,27 +86,29 @@ ul li:hover ul.dropdown{
 }
 .Fsection{
     display: flex;
-    padding-top: 10px;
-    height: 500px;
+    padding: 20px;
+    height: 600px;
     width: 100%;
-    
-    justify-content: center;
+    flex-direction: column;
 }
 .main_box{
     display: flex;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     font-weight: bold;
     border: 3px solid #f1f1f1;
     border-radius: 5px;
-    z-index: 2;
-    margin-top: 9%;
-    width: 65%;
-    height: 85px;
-    padding: 20px;
+    width: 70%;
+    height: 110px;
+    padding: 15px;
+    margin: 5%;
+    z-index: 3;
+    
 }
 .profile{
-    width: 60px;
-    height: 55px;
+    display: flex;
+    width:6%;
+    height: 60px;
     padding: 15px;
     border: 2px solid #736b6b3d;
     border-radius: 50px;
@@ -115,12 +118,14 @@ ul li:hover ul.dropdown{
 }
 .Ptext{
     padding-left: 30px;
+    width: 60%;
     font-family:Chivo,sans-serif,'Arial Narrow Bold';
     color:rgba(255, 255, 255, 0.852);
 }
 .insta-link{
     display: flex;
-    margin-left: 50%;
+    width: 30%;
+    justify-content: center;
     align-items: center;
     
 }
@@ -129,28 +134,41 @@ ul li:hover ul.dropdown{
     color:rgba(255, 255, 255, 0.852);
     font-size: 20px;
 }
+.contant-pic{
+    width: 600px;
+    height: 400px;
+    /*margin-top: 20%;*/
+    border: 4px solid #8e8e8eba;
+    z-index: 2;
+}
 .Ssection{
     display: flex;
-    height: 500px;
-    justify-content: space-around ;
+    height: 800px;
+    width: 100%;
+    /* justify-content: space-around; */
+    flex-direction: column;
 }
 .Ssecbackground{
     background:#001025;
 }
-.contant-pic{
-    background-image: url(https://source.unsplash.com/random/1920x1080/?coding,programing,webdevelopment);
-    background-size: cover;
-    width: 25%;
-    padding: 25px;
-    height: 60%;
-    margin-top: 20%;
+
+.slides-heading{
+    font-size: 60px;
+    font-family:Chivo,sans-serif,'Arial Narrow Bold';
+    color:rgba(255, 255, 255, 0.852);
+    margin-top: 13%;
+    margin-left: 2%;
+}
+.main-slides{
+    display: flex;
+    justify-content: space-around;
 }
 .slides{
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     width: 15%;
-    height: 50%;
-    margin-top: 15%;
+    height: 124%;
+    margin-top: 4%;
     flex-direction: column;
     align-items: center;
 }
@@ -170,7 +188,7 @@ ul li:hover ul.dropdown{
     color:rgba(255, 255, 255, 0.852);
     font-size: 32px;
 }
-.copyright{
+.footer{
     display: flex;
     background-color: #011127f5;
     height: 80px;
@@ -178,13 +196,17 @@ ul li:hover ul.dropdown{
     font-size: 15px;
     align-items: center;
 }
-.profile-copyright{
-    width: 47px;
-    height: 30px;
+.profile-footer{
+    border: 2px solid #736b6b3d;
+    border-radius: 50px;
+    background-image: url(../Image/picon.jpeg);
+    background-size: cover;
+    width: 7%;
+    height: 86%;
     margin: 5px 20px;
     margin-left: 25%;
 }
-.copyright-text{
+.footer-text{
     width: 80%;
     border-left: 2px solid #736b6ba8;
     /* padding-left: 10px; */
@@ -200,3 +222,99 @@ ul li:hover ul.dropdown{
     font-size: 22px;
 }
 
+
+/*____________________________Media query________________________*/
+
+@media only screen and (max-width:950px){
+    .navbar{
+        width: 107%;
+    }
+    .main_box {
+        height: 80px;
+        margin: 3%;
+    }
+   
+    .profile {
+        width: 7%;
+        height: 35px;
+    }
+    .contant-pic {
+        width: 40%;
+        height: 60%;
+        margin-top: 16%;
+        margin-left: 5%;
+    }
+    .programing-img{
+        width: 100%;
+        height: 100%;
+    
+    }
+    .lnav{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:450px){
+    .lnav{
+        width: 60%;
+    }
+    .nav_list li a{
+        padding: 0px 0px;
+    }
+    .rnav{
+        width: 55%;
+        font-size: 15px;
+    }
+    .Fsection {
+        height: 500px;
+    }
+    .main_box {
+        height: 60px;
+        width: 91%;
+        margin: 0%;
+        font-size: 12px;
+        margin-top: 10%;
+    }
+    .contant-pic{
+        width: 50%;
+        height: 50%;
+        margin-top: 25%;
+        margin-left: 40%;
+    }
+    .profile {
+        width: 11%;
+        height: 37px;
+    }
+    .Ssection{
+       width: 109%;
+       height: 500px;
+    }
+    .slides{
+        width: 18%;
+        height: 110%;
+    }
+    .slides-text {
+        padding: 5px;
+        font-size: 27px;
+    }
+    .footer{
+        height: 60px;
+        width: 109%;
+        font-size: 10px;
+    }
+    .profile-footer{
+        width: 17%;
+        height: 83%;
+        margin-left: 3%;
+    
+    
+    }
+    .social-link {
+        display: flex;
+        padding: 0px 0px; 
+        font-size: 15px;
+    }
+
+
+
+
+}
